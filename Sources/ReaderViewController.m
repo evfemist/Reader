@@ -474,8 +474,10 @@
 	ignoreDidScroll = YES;
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
+- (void)viewDidLayoutSubviews
 {
+    [super viewDidLayoutSubviews];
+
 	if (CGSizeEqualToSize(theScrollView.contentSize, CGSizeZero) == false)
 	{
 		[self updateContentViews:theScrollView]; lastAppearSize = CGSizeZero;
